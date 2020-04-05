@@ -6,6 +6,7 @@
     <title>Movie Laravel App</title>
 
     <link rel="stylesheet" href="/css/main.css">
+    <livewire:styles>
 </head>
 <body class="font-sans bg-gray-900 text-white">
     <nav class="border-b border-gray-800">
@@ -27,12 +28,7 @@
                 </li>
             </ul>
             <div class="flex flex-col md:flex-row items-center">
-                <div class="relative  mt-3 md:mt-0">
-                    <input type="text" class="bg-gray-800 rounded-full w-64 pl-8 py-1 focus:outline-none focus:shadow-outline" placeholder="Search...">
-                    <div class="absolute top-0">
-                        <svg class="fill-current w-4 text-gray-500 mt-2 ml-2" viewBox="0 0 24 24"><path class="heroicon-ui" d="M16.32 14.9l5.39 5.4a1 1 0 01-1.42 1.4l-5.38-5.38a8 8 0 111.41-1.41zM10 16a6 6 0 100-12 6 6 0 000 12z"/></svg>
-                    </div>
-                </div>
+                <livewire:search-dropdown>
                 <div class="md:ml-4 mt-3 md:mt-0">
                     <a href="#">
                         <img src="https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-1/p160x160/43787762_10212154781200464_5234157398163193856_o.jpg?_nc_cat=109&_nc_sid=dbb9e7&_nc_ohc=UboFsUnavFAAX8iZlyl&_nc_ht=scontent-mad1-1.xx&_nc_tp=6&oh=fbabbd98ded672c02301015363ea23d9&oe=5EAE5EC2" alt="avatar" class="rounded-full w-8 h-8">
@@ -42,5 +38,6 @@
         </div>
     </nav>
     @yield('content')
+    <livewire:scripts>
 </body>
 </html>

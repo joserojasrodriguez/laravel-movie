@@ -12,6 +12,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/','MovieController@index')->name('movies.index');
+Route::get('/movie/{movie}','MovieController@show')->name('movies.show');
 
-Route::view('/','index');
-Route::view('/movie','show');

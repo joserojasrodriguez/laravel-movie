@@ -26,7 +26,7 @@ class MovieController extends Controller
             return [$genre['id'] => $genre['name']];
         });
 
-        return view('index', [
+        return view('movie.index', [
             'popularMovies'    => $popularMovies,
             'nowPlayingMovies' => $nowPlayingMovies,
             'genres'           => $genres
@@ -44,43 +44,10 @@ class MovieController extends Controller
             ->get('http://api.themoviedb.org/3/movie/' . $id . '?append_to_response=credits,videos,images')
             ->json()['images'];
 
-        return view('show', [
+        return view('movie.show', [
             'movie' => $movie,
             'images' => $images
         ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }
